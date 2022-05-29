@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-button {
+    transition: 300ms cubic-bezier(.51,.92,.24,1.15);
+}
+
+.login-button:hover {
+    transform: scale(1.05);
+}
+
+.login-button:active {
+    transform: scale(0.95);
+}
+
+.navbar-link {
+    transition: 300ms cubic-bezier(.51,.92,.24,1.15);
+}
+
+.navbar-link:active {
+    transform: scale(0.95);
+}

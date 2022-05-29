@@ -1,0 +1,87 @@
+<header class="navbar border border-gray-200 p-4">
+    <nav>
+        <ul class="flex justify-between text-base font-bold tracking-wide">
+            <li
+                {% if '/' == request.path %}
+                class="navbar-link px-2 text-lime-600"
+                {% else %}
+                class="navbar-link px-2 ease-linear duration-200 hover:text-lime-600"
+                {% endif %}
+            >
+                <a href="/">Home</a>
+            </li>
+            <li
+                {% if 'about' in request.path %}
+                class="navbar-link px-2 text-lime-600"
+                {% else %}
+                class="navbar-link px-2 ease-linear duration-200 hover:text-lime-600"
+                {% endif %}
+            >
+                <a href="/about">About</a>
+            </li>
+            <li
+                {% if 'contact' in request.path %}
+                class="navbar-link px-2 text-lime-600"
+                {% else %}
+                class="navbar-link px-2 ease-linear duration-200 hover:text-lime-600"
+                {% endif %}
+            >
+                <a href="/contact">Contact</a>
+            </li>
+            <li
+                {% if 'agents' in request.path %}
+                class="navbar-link px-2 text-lime-600"
+                {% else %}
+                class="navbar-link px-2 ease-linear duration-200 hover:text-lime-600"
+                {% endif %}
+            >
+                <a href="#">Agents</a>
+            </li>
+            <li
+                {% if 'buying' in request.path %}
+                class="navbar-link px-2 text-lime-600"
+                {% else %}
+                class="navbar-link px-2 ease-linear duration-200 hover:text-lime-600"
+                {% endif %}
+            >
+                <a href="#">Buying</a>
+            </li>
+            <li
+                {% if 'renting' in request.path %}
+                class="navbar-link px-2 text-lime-600"
+                {% else %}
+                class="navbar-link px-2 ease-linear duration-200 hover:text-lime-600"
+                {% endif %}
+            >
+                <a href="#">Renting</a>
+            </li>
+            <li
+                {% if 'selling' in request.path %}
+                class="navbar-link px-2 text-lime-600"
+                {% else %}
+                class="navbar-link px-2 ease-linear duration-200 hover:text-lime-600"
+                {% endif %}
+            >
+                <a href="#">Selling</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="flex justify-end">
+        <nav class="max-w-max">
+            <ul class="flex justify-between font-bold p-px">
+                <li
+                    {% if 'agents' in request.path %}
+                    class="px-2 text-lime-600"
+                    {% else %}
+                    class="ml-4 px-2 ease-linear duration-200 hover:text-lime-600"
+                    {% endif %}
+                >
+                    <a href="/register">Register</a>
+                </li>
+                <li class="ml-4 p-px text-green-100 login-button">
+                    <a class="rounded-full bg-green-500 px-4 py-2 hover:bg-green-600 ease-linear duration-200" href="/login">Log in</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
